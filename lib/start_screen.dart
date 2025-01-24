@@ -6,7 +6,13 @@ class StartScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return  MaterialApp(
+      home: Scaffold(
+        body: Container(
+          decoration: const BoxDecoration(
+                gradient: LinearGradient(
+              colors: [Colors.purple, Colors.deepPurple],
+            )),child:  Center(
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -29,7 +35,7 @@ class StartScreen extends StatelessWidget {
                     builder: (context) => const QuestionsScreen()),
               );
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.arrow_right_alt,
               color: Colors.white,
             ),
@@ -40,6 +46,6 @@ class StartScreen extends StatelessWidget {
           ),
         ],
       ),
-    );
+    ))));
   }
 }
